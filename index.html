@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irshad Ahmed Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/lapi.jpg" alt="Logo">
+            </div>
+            <div class="center-text">IA Develops</div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Hi, I'm Irshad Ahmed</h1>
+            <p>Front-End Developer | Learner</p>
+            <a href="#projects">View My Work</a>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>1. Archaeological Diggings Using Machine Learning</h3>
+                <p>This project involves using machine learning techniques to analyze archaeological data and uncover
+                    hidden insights.</p>
+            </div>
+            <div class="project">
+                <h3>2. Floriculture Investigations via Data Scrambling</h3>
+                <p>A project focused on analyzing floriculture patterns by applying data scrambling and predictive
+                    modeling.</p>
+            </div>
+            <div class="project">
+                <h3>3. Uncovering Trends from WHO & CDC</h3>
+                <p>Leveraging data from WHO and CDC to identify regional trends and disparities in health-related
+                    statistics.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Achievements & Certifications</h2>
+            <!-- Main Box with Button -->
+            <div id="certifications-box">
+                <button id="toggle-certifications">Click Here to Reveal Certifications</button>
+            </div>
+        
+            <!-- Hidden Certification Boxes -->
+            <div id="certification-container">
+                <div class="certification-box">
+                    <h4>IT Fundamentals (IBM)</h4>
+                    <p>Foundational IT concepts, hardware, and networking.</p>
+                </div>
+                <div class="certification-box">
+                    <h4>Introduction to Generative AI (Google)</h4>
+                    <p>Principles and applications of Generative AI.</p>
+                </div>
+                <div class="certification-box">
+                    <h4>Data Fundamentals (IBM)</h4>
+                    <p>Introduction to data management and analytics.</p>
+                </div>
+                <div class="certification-box">
+                    <h4>Web Development Fundamentals (IBM)</h4>
+                    <p>Core technologies for building responsive websites.</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Get references to the button and certification container
+            const toggleButton = document.getElementById('toggle-certifications');
+            const certificationContainer = document.getElementById('certification-container');
+        
+            // Add a click event listener to the button
+            toggleButton.addEventListener('click', () => {
+                // Toggle the 'visible' class on the certification container
+                certificationContainer.classList.toggle('visible');
+        
+                // Optional: Update button text based on visibility
+                if (certificationContainer.classList.contains('visible')) {
+                    toggleButton.textContent = 'Hide Certifications';
+                } else {
+                    toggleButton.textContent = 'Click Here to Reveal Certifications';
+                }
+            });
+        
+            // Add functionality to highlight certification boxes on click
+            const certificationBoxes = document.querySelectorAll('.certification-box');
+            certificationBoxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    // Remove 'active' class from all boxes
+                    certificationBoxes.forEach(b => b.classList.remove('active'));
+                    // Add 'active' class to the clicked box
+                    box.classList.add('active');
+                });
+            });
+        </script>
+        
+    </main>
+    <footer>
+        <p>© 2022 Irshad Ahmed</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
